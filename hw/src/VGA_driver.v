@@ -27,41 +27,43 @@ module VGA_Driver640x480 (
 	output  [8:0] posY 		// posicion en vertical  del pixel siguiente
 );
 
+//parámetros
 localparam SCREEN_X = 640; 	// tamaño de la pantalla visible en horizontal 
-localparam FRONT_PORCH_X =16;  
-localparam SYNC_PULSE_X = 96;
-localparam BACK_PORCH_X = 48;
-localparam TOTAL_SCREEN_X = SCREEN_X+FRONT_PORCH_X+SYNC_PULSE_X+BACK_PORCH_X; 	// total pixel pantalla en horizontal 
+localparam FRONT_PORCH_X =16;  // margen superior
+localparam SYNC_PULSE_X = 96;  // hsync length
+localparam BACK_PORCH_X = 48;  //margen inferior
+localparam TOTAL_SCREEN_X = SCREEN_X + FRONT_PORCH_X + SYNC_PULSE_X + BACK_PORCH_X; 	// total pixel pantalla en horizontal (800)
 
 
 localparam SCREEN_Y = 480; 	// tamaño de la pantalla visible en Vertical 
-localparam FRONT_PORCH_Y =10;  
-localparam SYNC_PULSE_Y = 2;
-localparam BACK_PORCH_Y = 33;
-localparam TOTAL_SCREEN_Y = SCREEN_Y+FRONT_PORCH_Y+SYNC_PULSE_Y+BACK_PORCH_Y; 	// total pixel pantalla en Vertical 
+localparam FRONT_PORCH_Y = 10;  //margen superior
+localparam SYNC_PULSE_Y = 2;   //Vsync length
+localparam BACK_PORCH_Y = 33;  //margen inferior
+localparam TOTAL_SCREEN_Y = SCREEN_Y + FRONT_PORCH_Y + SYNC_PULSE_Y + BACK_PORCH_Y; 	// total pixel pantalla en Vertical (525)
 
-
+//registros
 reg  [9:0] countX;
 reg  [8:0] countY;
 
-assign posX    = countX;
-assign posY    = countY;
+//asignaciones (combinacional)
+assign posX = countX;
+assign posY = countY;
 
-assign pixelOut = (countX<SCREEN_X) ? (pixelIn ) : (8'b00000000) ;
+assign pixelOut = (countX < SCREEN_X) ? (pixelIn) : (8'b00000000);
 
-assign Hsync_n = ~((countX>=SCREEN_X+FRONT_PORCH_X) && (countX<SCREEN_X+SYNC_PULSE_X+FRONT_PORCH_X)); 
-assign Vsync_n = ~((countY>=SCREEN_Y+FRONT_PORCH_Y) && (countY<SCREEN_Y+FRONT_PORCH_Y+SYNC_PULSE_Y));
+assign Hsync_n = ~((countX >= SCREEN_X + FRONT_PORCH_X) && (countX < SCREEN_X + FRONT_PORCH_X + SYNC_PULSE_X)); 
+assign Vsync_n = ~((countY >= SCREEN_Y + FRONT_PORCH_Y) && (countY < SCREEN_Y + FRONT_PORCH_Y + SYNC_PULSE_Y));
 
-
+//logica contadores
 always @(posedge clk) begin
 	if (rst) begin
 		countX <= 10'b0;
 		countY <= 10'b0;
 	end
 	else begin 
-		if (countX >= (TOTAL_SCREEN_X-1)) begin
+		if (countX >= (TOTAL_SCREEN_X - 1)) begin
 			countX <= 0;
-			if (countY >= (TOTAL_SCREEN_Y-1)) begin
+			if (countY >= (TOTAL_SCREEN_Y - 1)) begin
 				countY <= 0;
 			end 
 			else begin

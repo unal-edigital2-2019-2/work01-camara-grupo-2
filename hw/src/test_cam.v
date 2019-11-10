@@ -1,23 +1,4 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    10:46:19 11/04/2019 
-// Design Name: 
-// Module Name:    test_cam 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
 module test_cam(
     input wire clk,           // board clock: 32 MHz 
     input wire rst,         	// reset button
@@ -42,8 +23,8 @@ module test_cam(
 parameter CAM_SCREEN_X = 160;
 parameter CAM_SCREEN_Y = 120;
 
-localparam AW = 15; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y)
-localparam DW = 8;
+localparam AW = 15; // LOG2(CAM_SCREEN_X*CAM_SCREEN_Y) ADRRESS WIDTH
+localparam DW = 8;  // DATA WIDTH
 
 // El color es RGB 332
 localparam RED_VGA =   8'b11100000;
@@ -67,8 +48,8 @@ reg  [AW-1: 0] DP_RAM_addr_out;
 // Conexión VGA Driver
 wire [DW-1:0]data_mem;	   // Salida de dp_ram al driver VGA
 wire [DW-1:0]data_RGB332;  // salida del driver VGA al puerto
-wire [9:0]VGA_posX;		   // Determinar la pos de memoria que viene del VGA
-wire [8:0]VGA_posY;		   // Determinar la pos de memoria que viene del VGA
+wire [9:0]VGA_posX;		   // Determinar la posicion de memoria que viene del VGA
+wire [8:0]VGA_posY;		   // Determinar la posicion de memoria que viene del VGA
 
 
 /* ****************************************************************************
