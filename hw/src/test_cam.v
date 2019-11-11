@@ -14,9 +14,11 @@ module test_cam(
 	
 	output wire CAM_xclk,		// System  clock imput
 	output wire CAM_pwdn,		// power down mode 
-	output wire CAM_reset		// clear all registers of cam
-	// colocar aqui las entras  y salidas de la camara 
-
+	output wire CAM_reset,		// clear all registers of cam
+	input wire [7:0] data, 		// entra de los datos (pixel) de la camara pines(D0-D7)
+	input wire  href,				// reloj que indica cuando cambia de fila la camara 
+	input wire pclk,				// Reloj que indica cuando envia un data 8bit(medio pixel)
+	input wire vsync				//Reloj que indica que se ha enviado toda una imagen completa
 );
 
 // TAMAÑO DE ADQUISICIÓN DE LA CAMARA 
@@ -122,7 +124,21 @@ VGA_Driver640x480 VGA640x480
 	.posY(VGA_posY) 			// posición en vertical  del pixel siguiente
 
 );
+/* ****************************************************************************
+captura_datos_downsampler Transformar los datos de formato RGB565 A RGB332 y enviar a la memoria
+**************************************************************************** */
+ captura_datos_downsampler captura_datos_downsampler(
+	.data(data), 		// Los datos de la camara 
+	.href(href), 		// 
+	.pclk(pclk),		//
+	.vsync(vsync),  	//
+	// Conexiones modulocaptura - memoria RAM 
+	.DP_RAM_addr_out(DP_RAM_addr_in),			//
+	.DP_RAM_data_out(DP_RAM_data_in),			//
+	.DP_RAM_regW(DP_RAM_regW)						//
 
+ );
+ 
  
 /* ****************************************************************************
 LÓgica para actualizar el pixel acorde con la buffer de memoria y el pixel de 

@@ -1,4 +1,4 @@
-module data_catcher (
+module captura_datos_downsampler (
 	input [7:0] data,
 	input href, 				
 	input pclk,
@@ -9,9 +9,9 @@ module data_catcher (
 	output reg DP_RAM_regW //autoriza escritura en la dpram
 );
 
-	reg [1:0] FSM_state = 0; //dos estados: WAIT_FRAME_START & ROW_CAPTURE
-    reg pixel_half = 0; //indica si va almacenado medio pixel (1 Byte) o uno completo
-	reg [15:0] temp_rgb; //registro temporal para guardar pixel completo, asumiendo RGB565
+	reg  FSM_state = 0; //dos estados =  0: WAIT_FRAME_START &  1: ROW_CAPTURE
+    reg pixel_half = 0; //indica 0:medio pixel y 1 :pixel completo 
+	reg [15:0] temp_rgb; //registro temporal para guardar pixel completo, asumiendo RGB555
 	
 	localparam MAX_MEMORY = 2 ** 15; //tamaño total de la dpram
 	localparam WAIT_FRAME_START = 0;
@@ -30,7 +30,7 @@ module data_catcher (
 	
 	ROW_CAPTURE: begin 
 	   	FSM_state <= vsync ? WAIT_FRAME_START : ROW_CAPTURE; 
-		if (href) begin
+		if (pclk== 1) begin
 		pixel_half <= ~ pixel_half;
 		
 			if (pixel_half == 0) begin
@@ -49,7 +49,7 @@ module data_catcher (
 	
 	endcase
 
-	if (DP_RAM_addr_out == MAX_MEMORY - 1) begin
+	if (vsync == 1) begin
 			DP_RAM_addr_out <= 0;
 		end
 

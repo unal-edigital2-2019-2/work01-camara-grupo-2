@@ -1,0 +1,49 @@
+ISim log file
+Running: /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.wdb 
+ISim P.20131013 (signature 0xfbc00daa)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# wave add /
+# run 1000 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+# isim force add /test_cam/clk 0 -radix bin -value 1 -radix bin -time 15 ps -repeat 30 ps
+# isim force add /test_cam/clk 0 -radix bin -value 1 -radix bin -time 15 ps -repeat 30 ps
+# isim force add /test_cam/rst 0 -radix bin
+# isim force add /test_cam/rst 0 -radix bin
+# isim force add /test_cam/data 0 -radix bin -value 1 -radix bin -time 5550055 ns -repeat 11100110 ns
+/test_cam/data: Array length and the input lengths are different
+
+# isim force add /test_cam/data 0 -radix bin -value 1 -radix bin -time 5550055 ns -repeat 11100110 ns
+/test_cam/data: Array length and the input lengths are different
+
+# isim force add /test_cam/href 0 -radix bin -value 1 -radix bin -time 2 s -repeat 4 s
+# isim force add /test_cam/href 0 -radix bin -value 1 -radix bin -time 2 s -repeat 4 s
+# isim force add /test_cam/pclk 0 -radix bin -value 1 -radix bin -time 125 ms -repeat 250 ms
+# isim force add /test_cam/pclk 0 -radix bin -value 1 -radix bin -time 125 ms -repeat 250 ms
+# isim force add /test_cam/vsync 0 -radix bin -value 1 -radix bin -time 8100 ms -repeat 9 s
+# isim force add /test_cam/vsync 0 -radix bin -value 1 -radix bin -time 8100 ms -repeat 9 s
+# run 16s
+Stopped at time : 738840775 ps : File "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v" Line 25
+# restart
+# show driver /test_cam/clk
+/test_cam/clk has no drivers.
+# isim force add /test_cam/clk 1 -radix bin
+# isim force add /test_cam/clk 1 -radix bin
+# isim force add /test_cam/rst 0 -radix bin
+# isim force add /test_cam/rst 0 -radix bin
+# isim force add /test_cam/data 11100111 -radix bin
+# isim force add /test_cam/data 11100111 -radix bin
+# isim force add /test_cam/href 0 -radix bin -value 1 -radix bin -time 2 s -repeat 4 s
+# isim force add /test_cam/href 0 -radix bin -value 1 -radix bin -time 2 s -repeat 4 s
+# isim force add /test_cam/pclk 0 -radix bin -value 1 -radix bin -time 125 ms -repeat 250 ms
+# isim force add /test_cam/pclk 0 -radix bin -value 1 -radix bin -time 125 ms -repeat 250 ms
+# isim force add /test_cam/vsync 0 -radix bin -value 1 -radix bin -time 13500 ms -repeat 15 s
+# isim force add /test_cam/vsync 0 -radix bin -value 1 -radix bin -time 13500 ms -repeat 15 s
+# run 32s
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

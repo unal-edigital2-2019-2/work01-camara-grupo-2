@@ -1,0 +1,10 @@
+Command line:
+   data_catcher_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  58151
+
+Mon Nov 11 16:12:20 2019
+
+
+ Elaboration Time: 0.12 sec
