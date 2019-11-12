@@ -4,15 +4,15 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 2.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> 
 Reading design: test_cam.prj
@@ -110,12 +110,12 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/VGA_driver.v" into library work
 Parsing module <VGA_Driver640x480>.
-Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/PLL/clk_32MHZ_to_25M_24M.v" into library work
-Parsing module <clk_32MHZ_to_25M_24M>.
 Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" into library work
 Parsing module <captura_datos_downsampler>.
 Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v" into library work
 Parsing module <buffer_ram_dp>.
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" into library work
+Parsing module <clk24_25_nexys4>.
 Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" into library work
 Parsing module <test_cam>.
 
@@ -126,15 +126,26 @@ WARNING:HDLCompiler:1016 - "/home/juandcarrillo/Documents/GitHub/work01-camara-g
 
 Elaborating module <test_cam>.
 
-Elaborating module <clk_32MHZ_to_25M_24M>.
+Elaborating module <clk24_25_nexys4>.
 
 Elaborating module <BUFG>.
 
-Elaborating module <PLL_BASE(BANDWIDTH="OPTIMIZED",CLK_FEEDBACK="CLKFBOUT",COMPENSATION="SYSTEM_SYNCHRONOUS",DIVCLK_DIVIDE=1,CLKFBOUT_MULT=25,CLKFBOUT_PHASE=0.0,CLKOUT0_DIVIDE=32,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT1_DIVIDE=33,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKIN_PERIOD=31.25,REF_JITTER=0.01)>.
-WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/PLL/clk_32MHZ_to_25M_24M.v" Line 121: Assignment to clkout2_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/PLL/clk_32MHZ_to_25M_24M.v" Line 122: Assignment to clkout3_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/PLL/clk_32MHZ_to_25M_24M.v" Line 123: Assignment to clkout4_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/PLL/clk_32MHZ_to_25M_24M.v" Line 124: Assignment to clkout5_unused ignored, since the identifier is never used
+Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=12.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=48.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=50,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 67: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 69: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 71: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 72: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 73: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 74: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 75: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 76: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 77: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 78: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 90: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 91: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 97: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 100: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v" Line 101: Assignment to clkfbstopped_unused ignored, since the identifier is never used
 
 Elaborating module <buffer_ram_dp(AW=15,DW=8)>.
 Reading initialization file \"src/image.men\".
@@ -170,11 +181,11 @@ INFO:Xst:3210 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/s
 	inferred   1 Multiplexer(s).
 Unit <test_cam> synthesized.
 
-Synthesizing Unit <clk_32MHZ_to_25M_24M>.
-    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/PLL/clk_32MHZ_to_25M_24M.v".
+Synthesizing Unit <clk24_25_nexys4>.
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/clk25_25_nexys4.v".
     Summary:
 	no macro.
-Unit <clk_32MHZ_to_25M_24M> synthesized.
+Unit <clk24_25_nexys4> synthesized.
 
 Synthesizing Unit <buffer_ram_dp>.
     Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v".
@@ -338,7 +349,6 @@ WARNING:Xst:2677 - Node <temp_rgb_6> of sequential type is unconnected in block 
 WARNING:Xst:2677 - Node <temp_rgb_7> of sequential type is unconnected in block <captura_datos_downsampler>.
 WARNING:Xst:2677 - Node <temp_rgb_11> of sequential type is unconnected in block <captura_datos_downsampler>.
 WARNING:Xst:2677 - Node <temp_rgb_12> of sequential type is unconnected in block <captura_datos_downsampler>.
-INFO:Xst:1901 - Instance clk25_24/pll_base_inst in unit clk25_24/pll_base_inst of type PLL_BASE has been replaced by PLL_ADV
 
 Optimizing unit <test_cam> ...
 
@@ -407,7 +417,7 @@ Primitive and Black Box Usage:
 # DSPs                             : 1
 #      DSP48A1                     : 1
 # Others                           : 1
-#      PLL_ADV                     : 1
+#      MMCME2_ADV                  : 1
 
 Device utilization summary:
 ---------------------------
@@ -436,7 +446,6 @@ Specific Feature Utilization:
     Number using Block RAM only:         16
  Number of BUFG/BUFGCTRLs:                5  out of     16    31%  
  Number of DSP48A1s:                      1  out of     16     6%  
- Number of PLL_ADVs:                      1  out of      2    50%  
 
 ---------------------------
 Partition Resource Summary:
@@ -459,7 +468,7 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-clk25_24/pll_base_inst/CLKOUT0     | BUFG                   | 37    |
+clk25_24/clkout0                   | BUFG                   | 37    |
 pclk                               | IBUF+BUFG              | 32    |
 clk                                | IBUFG                  | 16    |
 -----------------------------------+------------------------+-------+
@@ -475,22 +484,22 @@ Speed Grade: -3
    Minimum period: 7.662ns (Maximum Frequency: 130.510MHz)
    Minimum input arrival time before clock: 3.698ns
    Maximum output required time after clock: 6.127ns
-   Maximum combinational path delay: No path found
+   Maximum combinational path delay: 2.078ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk25_24/pll_base_inst/CLKOUT0'
+Timing constraint: Default period analysis for Clock 'clk25_24/clkout0'
   Clock period: 7.662ns (frequency: 130.510MHz)
   Total number of paths / destination ports: 5080 / 274
 -------------------------------------------------------------------------
 Delay:               7.662ns (Levels of Logic = 2)
   Source:            VGA640x480/countY_8 (FF)
   Destination:       DP_RAM/Mram_ram1 (RAM)
-  Source Clock:      clk25_24/pll_base_inst/CLKOUT0 rising
-  Destination Clock: clk25_24/pll_base_inst/CLKOUT0 rising
+  Source Clock:      clk25_24/clkout0 rising
+  Destination Clock: clk25_24/clkout0 rising
 
   Data Path: VGA640x480/countY_8 to DP_RAM/Mram_ram1
                                 Gate     Net
@@ -527,13 +536,13 @@ Delay:               3.185ns (Levels of Logic = 1)
                                        (30.6% logic, 69.4% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/pll_base_inst/CLKOUT0'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/clkout0'
   Total number of paths / destination ports: 20 / 20
 -------------------------------------------------------------------------
 Offset:              3.698ns (Levels of Logic = 2)
   Source:            rst (PAD)
   Destination:       VGA640x480/countX_0 (FF)
-  Destination Clock: clk25_24/pll_base_inst/CLKOUT0 rising
+  Destination Clock: clk25_24/clkout0 rising
 
   Data Path: rst to VGA640x480/countX_0
                                 Gate     Net
@@ -567,13 +576,13 @@ Offset:              3.554ns (Levels of Logic = 2)
                                        (49.2% logic, 50.8% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/pll_base_inst/CLKOUT0'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/clkout0'
   Total number of paths / destination ports: 62 / 10
 -------------------------------------------------------------------------
 Offset:              6.127ns (Levels of Logic = 2)
   Source:            DP_RAM/Mram_ram16 (RAM)
   Destination:       VGA_R<3> (PAD)
-  Source Clock:      clk25_24/pll_base_inst/CLKOUT0 rising
+  Source Clock:      clk25_24/clkout0 rising
 
   Data Path: DP_RAM/Mram_ram16 to VGA_R<3>
                                 Gate     Net
@@ -585,6 +594,24 @@ Offset:              6.127ns (Levels of Logic = 2)
     ----------------------------------------
     Total                      6.127ns (4.624ns logic, 1.503ns route)
                                        (75.5% logic, 24.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.078ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       clk25_24/mmcm_adv_inst:RST (PAD)
+
+  Data Path: rst to clk25_24/mmcm_adv_inst:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.856  rst_IBUF (rst_IBUF)
+    MMCME2_ADV:RST             0.000          clk25_24/mmcm_adv_inst
+    ----------------------------------------
+    Total                      2.078ns (1.222ns logic, 0.856ns route)
+                                       (58.8% logic, 41.2% route)
 
 =========================================================================
 
@@ -599,13 +626,13 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 pclk           |    2.996|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock clk25_24/pll_base_inst/CLKOUT0
-------------------------------+---------+---------+---------+---------+
-                              | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock                  |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
-------------------------------+---------+---------+---------+---------+
-clk25_24/pll_base_inst/CLKOUT0|    7.662|         |         |         |
-------------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock clk25_24/clkout0
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk25_24/clkout0|    7.662|         |         |         |
+----------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock pclk
 ---------------+---------+---------+---------+---------+
@@ -618,15 +645,15 @@ pclk           |    3.185|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 6.73 secs
+Total REAL time to Xst completion: 11.00 secs
+Total CPU time to Xst completion: 7.71 secs
  
 --> 
 
 
-Total memory usage is 395960 kilobytes
+Total memory usage is 395880 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
-Number of infos    :    3 (   0 filtered)
+Number of warnings :   34 (   0 filtered)
+Number of infos    :    2 (   0 filtered)
 

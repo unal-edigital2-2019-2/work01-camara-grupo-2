@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="test_cam" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/test_cam/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/data" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">data[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/href" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">href</obj_property>
+      <obj_property name="ObjectShortName">href</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/pclk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">pclk</obj_property>
+      <obj_property name="ObjectShortName">pclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/vsync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">vsync</obj_property>
+      <obj_property name="ObjectShortName">vsync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/clk32M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk32M</obj_property>
+      <obj_property name="ObjectShortName">clk32M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/clk25M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk25M</obj_property>
+      <obj_property name="ObjectShortName">clk25M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/clk24M" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk24M</obj_property>
+      <obj_property name="ObjectShortName">clk24M</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/DP_RAM_addr_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DP_RAM_addr_in[14:0]</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_addr_in[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/DP_RAM_data_in" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DP_RAM_data_in[7:0]</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_data_in[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/DP_RAM_regW" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">DP_RAM_regW</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_regW</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/data_mem" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_mem[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_mem[7:0]</obj_property>
+      <obj_property name="label">data_mem[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/data_RGB332" type="array" db_ref_id="1">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">data_RGB332[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_RGB332[7:0]</obj_property>
+      <obj_property name="label">data_RGB332[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/VGA_posX" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_posX[9:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_posX[9:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/VGA_posY" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">VGA_posY[8:0]</obj_property>
+      <obj_property name="ObjectShortName">VGA_posY[8:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/DP_RAM_addr_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DP_RAM_addr_out[14:0]</obj_property>
+      <obj_property name="ObjectShortName">DP_RAM_addr_out[14:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/CAM_SCREEN_X" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CAM_SCREEN_X[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CAM_SCREEN_X[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/CAM_SCREEN_Y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">CAM_SCREEN_Y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CAM_SCREEN_Y[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/AW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">AW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">AW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/DW" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">DW[31:0]</obj_property>
+      <obj_property name="ObjectShortName">DW[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/RED_VGA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">RED_VGA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">RED_VGA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/GREEN_VGA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">GREEN_VGA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">GREEN_VGA[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/test_cam/BLUE_VGA" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">BLUE_VGA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">BLUE_VGA[7:0]</obj_property>
+   </wvobject>
+</wave_config>

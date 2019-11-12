@@ -1,4 +1,4 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.exe -prj /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_beh.prj work.test_cam work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.exe -prj /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_beh.prj test_cam work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
@@ -13,7 +13,7 @@ Starting static elaboration
 WARNING:HDLCompiler:1016 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 85: Port LOCKED is not connected to this instance
 Completed static elaboration
 Fuse Memory Usage: 97604 KB
-Fuse CPU Usage: 1380 ms
+Fuse CPU Usage: 1420 ms
 Compiling module BUFG
 Compiling module PLL_ADV(BANDWIDTH="OPTIMIZED",CL...
 Compiling module PLL_BASE(CLKFBOUT_MULT=25,CLKIN_...
@@ -28,5 +28,5 @@ Waiting for 2 sub-compilation(s) to finish...
 Compiled 9 Verilog Units
 Built simulation executable /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.exe
 Fuse Memory Usage: 668980 KB
-Fuse CPU Usage: 1550 ms
-GCC CPU Usage: 4850 ms
+Fuse CPU Usage: 1590 ms
+GCC CPU Usage: 5090 ms
