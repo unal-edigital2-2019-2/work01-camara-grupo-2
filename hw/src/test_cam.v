@@ -35,7 +35,7 @@ localparam BLUE_VGA =  8'b00000011;
 
 
 // Clk 
-wire clk32M;
+ wire clk32M;
 wire clk25M;
 wire clk24M;
 
@@ -68,9 +68,9 @@ assign VGA_B = {data_RGB332[1:0],2'b00};
 Asignación de las señales de control xclk pwdn y reset de la camara 
 **************************************************************************** */
 
-assign CAM_xclk=  clk24M;
-assign CAM_pwdn=  0;			// power down mode 
-assign CAM_reset=  0;
+assign CAM_xclk =  clk24M;
+assign CAM_pwdn=  0 ;			// power down mode 
+assign CAM_reset=  0  ;
 
 
 
@@ -81,7 +81,7 @@ assign CAM_reset=  0;
   el bloque genera un reloj de 25Mhz usado para el VGA  y un relo de 24 MHz
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
-//assign clk32M =clk;
+assign clk32M =clk;
 clk24_25_nexys4
   clk25_24(
   .CLK_IN1(clk),

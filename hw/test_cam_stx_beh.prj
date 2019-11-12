@@ -1,4 +1,5 @@
 verilog isim_temp "src/VGA_driver.v"
+verilog isim_temp "src/clk24_25_nexys4.v"
 verilog isim_temp "src/captura_datos_downsampler.v"
 verilog isim_temp "src/buffer_ram_dp.v"
 verilog isim_temp "src/test_cam.v"

@@ -2,7 +2,7 @@
 module buffer_ram_dp#( 
 	parameter AW = 15, // Cantidad de bits  de la dirección 
 	parameter DW = 8, // cantidad de Bits de los datos 
-	parameter   imageFILE= "src/image.men")
+	parameter   imageFILE= "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src")
 	( 
 	//escritura
 	input  clk_w, 

@@ -23,7 +23,7 @@
 #endif
 static const char *ng0 = "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v";
 static int ng1[] = {1, 0};
-static int ng2[] = {778921326, 0, 1835100005, 0, 1919102825, 0, 115, 0};
+static int ng2[] = {796095075, 0, 841967735, 0, 1970302765, 0, 1630365554, 0, 1634558322, 0, 808529251, 0, 2003792491, 0, 1215652399, 0, 793209204, 0, 1701737587, 0, 1868789101, 0, 1819225924, 0, 1920100716, 0, 1852072801, 0, 795506017, 0, 1752132965, 0, 47, 0};
 
 
 
@@ -238,7 +238,7 @@ LAB0:    xsi_set_current_line(36, ng0);
 LAB2:    xsi_set_current_line(37, ng0);
     t1 = ((char*)((ng2)));
     t2 = (t0 + 2952);
-    xsi_vlogfile_readmemh(t1, 104, t2, 0, 0, 0, 0);
+    xsi_vlogfile_readmemh(t1, 520, t2, 0, 0, 0, 0);
 
 LAB1:    return;
 }

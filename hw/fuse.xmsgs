@@ -5,5 +5,8 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 85: Port <arg fmt="%s" index="1">LOCKED</arg> is not connected to this instance
+</msg>
+
 </messages>
 
