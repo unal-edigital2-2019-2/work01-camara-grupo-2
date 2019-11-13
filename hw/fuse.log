@@ -1,31 +1,20 @@
-Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.exe -prj /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_beh.prj work.test_cam work.glbl 
+Running: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -lib secureip -o /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/captura_datos_downsampler_isim_beh.exe -prj /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/captura_datos_downsampler_beh.prj work.captura_datos_downsampler work.glbl 
 ISim P.20131013 (signature 0xfbc00daa)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/VGA_driver.v" into library work
-Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" into library work
 Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" into library work
-Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v" into library work
-Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" into library work
 Analyzing Verilog file "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v" into library work
 Starting static elaboration
-WARNING:HDLCompiler:1016 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 85: Port LOCKED is not connected to this instance
 Completed static elaboration
-Fuse Memory Usage: 98248 KB
-Fuse CPU Usage: 1290 ms
-Compiling module BUFG
-Compiling module MMCME2_ADV(CLKOUT1_DIVIDE=50,CLK...
-Compiling module clk24_25_nexys4
-Compiling module buffer_ram_dp(AW=15,DW=8)
-Compiling module VGA_Driver640x480_default
+Fuse Memory Usage: 95480 KB
+Fuse CPU Usage: 1260 ms
 Compiling module captura_datos_downsampler
-Compiling module test_cam
 Compiling module glbl
 Time Resolution for simulation is 1ps.
 Waiting for 1 sub-compilation(s) to finish...
-Compiled 8 Verilog Units
-Built simulation executable /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/test_cam_isim_beh.exe
-Fuse Memory Usage: 670992 KB
-Fuse CPU Usage: 1420 ms
-GCC CPU Usage: 3020 ms
+Compiled 2 Verilog Units
+Built simulation executable /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/captura_datos_downsampler_isim_beh.exe
+Fuse Memory Usage: 655648 KB
+Fuse CPU Usage: 1270 ms
+GCC CPU Usage: 260 ms

@@ -1,7 +1,7 @@
-INFILE=/home/sebas/Escritorio/prueba_test_cam/build/project_r.ncd
-OUTFILE=/home/sebas/Escritorio/prueba_test_cam/build/project_r.bit
+INFILE=/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/build/project_r.ncd
+OUTFILE=/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/build/project_r.bit
 FAMILY=Artix7
 PART=xc7a100t-3csg324
-WORKINGDIR=/home/sebas/Escritorio/prueba_test_cam/build
+WORKINGDIR=/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/build
 LICENSE=WebPack
-USER_INFO=211722635_0_0_337
+USER_INFO=211725040_0_0_612

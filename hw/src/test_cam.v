@@ -68,7 +68,7 @@ assign VGA_B = {data_RGB332[1:0],2'b00};
 Asignación de las señales de control xclk pwdn y reset de la camara 
 **************************************************************************** */
 
-assign CAM_xclk =  clk24M;
+assign CAM_xclk =  clk25M;    // debe ir a 24Mhz con el PLL y con el divisor va a 25Mhz
 assign CAM_pwdn=  0 ;			// power down mode 
 assign CAM_reset=  0  ;
 
@@ -82,6 +82,7 @@ assign CAM_reset=  0  ;
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
 assign clk32M =clk;
+/*
 clk24_25_nexys4
   clk25_24(
   .CLK_IN1(clk),
@@ -89,6 +90,16 @@ clk24_25_nexys4
   .CLK_OUT2(clk24M),
   .RESET(rst)
  );
+*/
+/* ***************************************************************************
+Prueba con modulo de divisor de frecuencia salida de 25Mhz
+**************************************************************************** */
+divisor divisor(
+	 
+	.clki(clk),
+	.clko(clk25M)	
+
+);
 
 
 /* ****************************************************************************

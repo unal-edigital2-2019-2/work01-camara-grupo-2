@@ -50,13 +50,13 @@ RTL Output                         : yes
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" into library work
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" into library work
 Parsing module <test_cam>.
-Analyzing Verilog file "/home/sebas/Escritorio/prueba_test_cam/buffer_ram_dp.v" into library work
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/buffer_ram_dp.v" into library work
 Parsing module <buffer_ram_dp>.
-Analyzing Verilog file "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" into library work
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" into library work
 Parsing module <clk24_25_nexys4>.
-Analyzing Verilog file "/home/sebas/Escritorio/prueba_test_cam/VGA_driver.v" into library work
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/VGA_driver.v" into library work
 Parsing module <VGA_Driver640x480>.
 
 =========================================================================
@@ -70,44 +70,44 @@ Elaborating module <clk24_25_nexys4>.
 Elaborating module <BUFG>.
 
 Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=12.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=48.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=50,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" Line 91: Assignment to wire_locked ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" Line 91: Assignment to wire_locked ignored, since the identifier is never used
 
 Elaborating module <buffer_ram_dp(AW=15,DW=8)>.
-Reading initialization file \"home/sebas/Escritorio/prueba_test_cam/image.mem\".
-WARNING:HDLCompiler:1670 - "/home/sebas/Escritorio/prueba_test_cam/buffer_ram_dp.v" Line 37: Signal <ram> in initial block is partially initialized.
+Reading initialization file \"home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/image.mem\".
+WARNING:HDLCompiler:1670 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/buffer_ram_dp.v" Line 37: Signal <ram> in initial block is partially initialized.
 
 Elaborating module <VGA_Driver640x480>.
-WARNING:HDLCompiler:413 - "/home/sebas/Escritorio/prueba_test_cam/VGA_driver.v" Line 70: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "/home/sebas/Escritorio/prueba_test_cam/VGA_driver.v" Line 74: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" Line 139: Result of 17-bit expression is truncated to fit in 15-bit target.
-WARNING:HDLCompiler:634 - "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" Line 42: Net <DP_RAM_addr_in[14]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" Line 43: Net <DP_RAM_data_in[7]> does not have a driver.
-WARNING:HDLCompiler:634 - "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" Line 44: Net <DP_RAM_regW> does not have a driver.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/VGA_driver.v" Line 70: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/VGA_driver.v" Line 74: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" Line 139: Result of 17-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:634 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" Line 42: Net <DP_RAM_addr_in[14]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" Line 43: Net <DP_RAM_data_in[7]> does not have a driver.
+WARNING:HDLCompiler:634 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" Line 44: Net <DP_RAM_regW> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <test_cam>.
-    Related source file is "/home/sebas/Escritorio/prueba_test_cam/test_cam.v".
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v".
         CAM_SCREEN_X = 160
         CAM_SCREEN_Y = 120
-INFO:Xst:3210 - "/home/sebas/Escritorio/prueba_test_cam/test_cam.v" line 86: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/test_cam.v" line 86: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
 WARNING:Xst:653 - Signal <DP_RAM_addr_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <DP_RAM_data_in> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <DP_RAM_regW> is used but never assigned. This sourceless signal will be automatically connected to value GND.
@@ -123,13 +123,13 @@ WARNING:Xst:653 - Signal <DP_RAM_regW> is used but never assigned. This sourcele
 Unit <test_cam> synthesized.
 
 Synthesizing Unit <clk24_25_nexys4>.
-    Related source file is "/home/sebas/Escritorio/prueba_test_cam/clk24_25_nexys4.v".
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/clk24_25_nexys4.v".
     Summary:
 	no macro.
 Unit <clk24_25_nexys4> synthesized.
 
 Synthesizing Unit <buffer_ram_dp>.
-    Related source file is "/home/sebas/Escritorio/prueba_test_cam/buffer_ram_dp.v".
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/buffer_ram_dp.v".
         AW = 15
         DW = 8
         imageFILE = "image.mem"
@@ -141,7 +141,7 @@ Synthesizing Unit <buffer_ram_dp>.
 Unit <buffer_ram_dp> synthesized.
 
 Synthesizing Unit <VGA_Driver640x480>.
-    Related source file is "/home/sebas/Escritorio/prueba_test_cam/VGA_driver.v".
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/prueba_test_cam/VGA_driver.v".
     Found 9-bit register for signal <countY>.
     Found 10-bit register for signal <countX>.
     Found 9-bit adder for signal <countY[8]_GND_6_o_add_10_OUT> created at line 70.
@@ -490,13 +490,13 @@ clk25_24/clkout0|    2.647|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 74.00 secs
-Total CPU time to Xst completion: 69.29 secs
+Total REAL time to Xst completion: 14.00 secs
+Total CPU time to Xst completion: 9.45 secs
  
 --> 
 
 
-Total memory usage is 513116 kilobytes
+Total memory usage is 507216 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   26 (   0 filtered)

@@ -1,0 +1,2 @@
+verilog work "src/captura_datos_downsampler.v"
+verilog work "/opt/Xilinx/14.7/ISE_DS/ISE//verilog/src/glbl.v"
