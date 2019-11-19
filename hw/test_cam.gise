@@ -72,7 +72,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574114492" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1574114492">
+    <transform xil_pn:end_ts="1574178613" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1574178613">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="src/VGA_driver.v"/>
@@ -94,9 +94,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1574114504" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1574114504">
+    <transform xil_pn:end_ts="1574178306" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1574178306">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="src/VGA_driver.v"/>
       <outfile xil_pn:name="src/buffer_ram_dp.v"/>
       <outfile xil_pn:name="src/captura_datos_downsampler.v"/>
@@ -104,10 +108,13 @@
       <outfile xil_pn:name="src/divisor.v"/>
       <outfile xil_pn:name="src/test_cam.v"/>
     </transform>
-    <transform xil_pn:end_ts="1574114506" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1015041936908162985" xil_pn:start_ts="1574114504">
+    <transform xil_pn:end_ts="1574178308" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-1015041936908162985" xil_pn:start_ts="1574178306">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="captura_datos_downsampler_beh.prj"/>
       <outfile xil_pn:name="captura_datos_downsampler_isim_beh.exe"/>
@@ -116,9 +123,12 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1574114506" xil_pn:in_ck="-6430202074269372179" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5448569637961185446" xil_pn:start_ts="1574114506">
+    <transform xil_pn:end_ts="1574178308" xil_pn:in_ck="-6430202074269372179" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-5448569637961185446" xil_pn:start_ts="1574178308">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="captura_datos_downsampler_isim_beh.wdb"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
@@ -151,16 +161,24 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573526112" xil_pn:in_ck="-2885835028204245669" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3633249574609842788" xil_pn:start_ts="1573526096">
+    <transform xil_pn:end_ts="1574173764" xil_pn:in_ck="-8464390662864390740" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:prop_ck="3633249574609842788" xil_pn:start_ts="1574173754">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="InputRemoved"/>
-      <status xil_pn:value="OutputRemoved"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="test_cam.lso"/>
+      <outfile xil_pn:name="test_cam.ngc"/>
+      <outfile xil_pn:name="test_cam.ngr"/>
+      <outfile xil_pn:name="test_cam.prj"/>
+      <outfile xil_pn:name="test_cam.stx"/>
+      <outfile xil_pn:name="test_cam.syr"/>
+      <outfile xil_pn:name="test_cam.xst"/>
+      <outfile xil_pn:name="test_cam_stx_beh.prj"/>
+      <outfile xil_pn:name="test_cam_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
     </transform>
     <transform xil_pn:end_ts="1573526113" xil_pn:in_ck="6023078477744554812" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4784894219589610610" xil_pn:start_ts="1573526112">
       <status xil_pn:value="SuccessfullyRun"/>
@@ -171,10 +189,12 @@
     <transform xil_pn:end_ts="1573526123" xil_pn:in_ck="-3811377207742690766" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-9181168457018749802" xil_pn:start_ts="1573526113">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
-      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputRemoved"/>
     </transform>

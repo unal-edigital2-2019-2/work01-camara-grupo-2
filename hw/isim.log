@@ -13,13 +13,10 @@ Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 # isim force add /captura_datos_downsampler/data 01010101 -radix bin
 # isim force add /captura_datos_downsampler/data 01010101 -radix bin
-# isim force add /captura_datos_downsampler/href 0 -radix bin -value 1 -radix bin -time 70 ms -repeat 700 ms
-# isim force add /captura_datos_downsampler/href 0 -radix bin -value 1 -radix bin -time 70 ms -repeat 700 ms
-# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 2500 us -repeat 5 ms
-# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 2500 us -repeat 5 ms
-# isim force add /captura_datos_downsampler/vsync 0 -radix bin -value 1 -radix bin -time 5400 ms -repeat 6 s
-# isim force add /captura_datos_downsampler/vsync 0 -radix bin -value 1 -radix bin -time 5400 ms -repeat 6 s
-# isim force remove /captura_datos_downsampler/pclk
-# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 12500 us -repeat 25 ms
-# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 12500 us -repeat 25 ms
-# run 7s
+# isim force add /captura_datos_downsampler/href 0 -radix bin -value 1 -radix bin -time 20 ms -repeat 200 ms
+# isim force add /captura_datos_downsampler/href 0 -radix bin -value 1 -radix bin -time 20 ms -repeat 200 ms
+# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 500 us -repeat 1 ms
+# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 500 us -repeat 1 ms
+# isim force add /captura_datos_downsampler/vsync 0 -radix bin -value 1 -radix bin -time 4500 ms -repeat 5 s
+# isim force add /captura_datos_downsampler/vsync 0 -radix bin -value 1 -radix bin -time 4500 ms -repeat 5 s
+# run 5s

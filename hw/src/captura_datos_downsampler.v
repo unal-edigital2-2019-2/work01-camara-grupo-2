@@ -12,8 +12,8 @@ module captura_datos_downsampler (
 	reg  [1:0] FSM_state = 0; //CUATRO estados =  00: WAIT_FRAME_START &  01: ROW_CAPTURE & 11 DATA_OUT_RANGE EN LA FILA & 10: DONE ha enviado la imagen de (160x120) pero sigue recibiendo porque la camara envia (480x260)
     reg pixel_half = 0; //indica 0:medio pixel y 1 :pixel completo 
 	reg [15:0] temp_rgb  ; //registro temporal para guardar pixel completo, asumiendo RGB555
-	reg [10:0] widthimage = 0 ; // registro que lleva el conteo del ancho de pixeles enviados (en 160 debe dentenerse)
-	reg [10:0] lengthimage = 0; // registro que lleva la cuenta de filas de pixeles enviadas (en 120 debe detenerse)
+	reg [10:0] widthimage = -1 ; // registro que lleva el conteo del ancho de pixeles enviados (en 160 debe dentenerse)
+	reg [10:0] lengthimage = -1; // registro que lleva la cuenta de filas de pixeles enviadas (en 120 debe detenerse)
 
 	localparam Maxwidthimage = 176;  // tamaño maximo del ancho de la imagen 
 	localparam Maxlengthimage = 144;    // tamaño maximo en largo de la imagen
@@ -23,9 +23,8 @@ module captura_datos_downsampler (
 	localparam DONE =  2;
 	
 	
-	always @( pclk)
+	always @(pclk)
 	begin 
-
 	case(FSM_state)
 
 	DONE:begin // ENVIE TODA LA IAMGEN(160x120) A LA MEMORIA , ESPERO HASATA OTRA IMAGEN
@@ -34,19 +33,25 @@ module captura_datos_downsampler (
 		DP_RAM_addr_out <= 0;
 			lengthimage <= 0;
 	end
-	DATA_OUT_RANGE : begin //  me estan enviadno datos que estan fueran del rango (160x120)no debo enviarlos a la memoria
+	DATA_OUT_RANGE : begin //  href esta en alto pero ya tome los 176 pixeles , el resto no lo guardo en memoria
 	 FSM_state <= (href==1)?  DATA_OUT_RANGE : ROW_CAPTURE ;
 	 widthimage <= 0 ;
 	 DP_RAM_regW <= 0;
 	 
 	end
-	WAIT_FRAME_START: begin //wait for VSYNC
+	WAIT_FRAME_START: begin //wait for href, conteo de href 
 	   FSM_state <= (href==0) ? WAIT_FRAME_START : ROW_CAPTURE;
 	   DP_RAM_regW <= 0 ;
+	   
+		
+		
+		
 	end
-	
+	/*Como aparece en el datasheet cuando vsync este bajo y href este alto , me estan enviando datos validos
+	en los flancos de subida de (pclk) leo 1byte , cada dos flancos leo el pixel en RGB565, 
+	*/
 	ROW_CAPTURE: begin 
-	   	FSM_state <= (vsync==0 && href==1)? ROW_CAPTURE : WAIT_FRAME_START; 
+	   	FSM_state <= (vsync==0 && href==1)? ROW_CAPTURE : WAIT_FRAME_START;  
 		if (pclk ==1) begin
 		pixel_half <= ~ pixel_half;
 		
@@ -59,38 +64,20 @@ module captura_datos_downsampler (
 				DP_RAM_data_out = {temp_rgb[15:13], temp_rgb[10:8],temp_rgb[4:3]}; //RGB565 a RGB332
 				DP_RAM_regW <= 1;
 				widthimage <= widthimage + 1 ;
-				if (widthimage  == Maxwidthimage-1) begin
+						if (widthimage  == Maxwidthimage-1) begin
 						FSM_state <= DATA_OUT_RANGE ;
-				end 
-				
-				if ( href == 0) begin
-					lengthimage <= lengthimage +1;
-					if(lengthimage == Maxlengthimage-1)begin
-					 FSM_state <= DONE;
+						lengthimage <= lengthimage + 1 ;
+							if(lengthimage == Maxlengthimage-1)begin
+							FSM_state <= DONE;
+								end	
+						end 
 					end
-				end 				
-			end
-
 	   	end
-	end
-	
+	end		
 	endcase
-/*
-	if (vsync == 1) begin
-			DP_RAM_addr_out <= 0;
-			lengthimage <= 0;
-		end
-*/
-	end
+end
+ 
 
-	always @(negedge href)begin
-	lengthimage <= lengthimage +1;
-			DP_RAM_regW <=0 ;
-				if(lengthimage == Maxlengthimage-1)begin
-					 FSM_state <= DONE;
-				end
-		
-	end
 endmodule
 
 /*****************************************************************

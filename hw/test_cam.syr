@@ -1,0 +1,989 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.05 secs
+ 
+--> 
+Reading design: test_cam.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "test_cam.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "test_cam"
+Output Format                      : NGC
+Target Device                      : xc6slx9-3-tqg144
+
+---- Source Options
+Top Module Name                    : test_cam
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 16
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/VGA_driver.v" into library work
+Parsing module <VGA_Driver640x480>.
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" into library work
+Parsing module <clk24_25_nexys4>.
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" into library work
+Parsing module <captura_datos_downsampler>.
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v" into library work
+Parsing module <buffer_ram_dp>.
+Analyzing Verilog file "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" into library work
+Parsing module <test_cam>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+WARNING:HDLCompiler:1016 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 86: Port LOCKED is not connected to this instance
+
+Elaborating module <test_cam>.
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 84: Assignment to clk32M ignored, since the identifier is never used
+
+Elaborating module <clk24_25_nexys4>.
+
+Elaborating module <BUFG>.
+
+Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=12.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=48.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=50,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+
+Elaborating module <buffer_ram_dp(AW=15,DW=8)>.
+Reading initialization file \"/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src\".
+WARNING:HDLCompiler:1670 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v" Line 37: Signal <ram> in initial block is partially initialized.
+
+Elaborating module <VGA_Driver640x480>.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/VGA_driver.v" Line 70: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/VGA_driver.v" Line 74: Result of 11-bit expression is truncated to fit in 10-bit target.
+
+Elaborating module <captura_datos_downsampler>.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 28: Signal <FSM_state> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 31: Signal <vsync> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 31: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 37: Signal <href> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 37: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 43: Signal <href> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 43: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 45: Signal <lengthimage> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 45: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 46: Signal <lengthimage> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 55: Signal <vsync> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 55: Result of 32-bit expression is truncated to fit in 2-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 57: Signal <pixel_half> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 59: Signal <pixel_half> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 60: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 63: Signal <DP_RAM_addr_out> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 63: Result of 16-bit expression is truncated to fit in 15-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 64: Signal <data> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 67: Signal <widthimage> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 67: Result of 12-bit expression is truncated to fit in 11-bit target.
+WARNING:HDLCompiler:91 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v" Line 68: Signal <widthimage> missing in the sensitivity list is added for synthesis purposes. HDL and post-synthesis simulations may differ as a result.
+WARNING:HDLCompiler:413 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 165: Result of 17-bit expression is truncated to fit in 15-bit target.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <test_cam>.
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v".
+        CAM_SCREEN_X = 160
+        CAM_SCREEN_Y = 120
+INFO:Xst:3210 - "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" line 87: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
+    Found 16-bit adder for signal <n0023> created at line 165.
+    Found 9x7-bit multiplier for signal <n0029> created at line 165.
+    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_4_o> created at line 161
+    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_5_o> created at line 161
+    Summary:
+	inferred   1 Multiplier(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred   2 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <test_cam> synthesized.
+
+Synthesizing Unit <clk24_25_nexys4>.
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/clk24_25_nexys4.v".
+    Summary:
+	no macro.
+Unit <clk24_25_nexys4> synthesized.
+
+Synthesizing Unit <buffer_ram_dp>.
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/buffer_ram_dp.v".
+        AW = 15
+        DW = 8
+        imageFILE = "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src"
+    Found 32768x8-bit dual-port RAM <Mram_ram> for signal <ram>.
+    Found 8-bit register for signal <data_out>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred   8 D-type flip-flop(s).
+Unit <buffer_ram_dp> synthesized.
+
+Synthesizing Unit <VGA_Driver640x480>.
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/VGA_driver.v".
+    Found 9-bit register for signal <countY>.
+    Found 10-bit register for signal <countX>.
+    Found 9-bit adder for signal <countY[8]_GND_6_o_add_10_OUT> created at line 70.
+    Found 10-bit adder for signal <countX[9]_GND_6_o_add_11_OUT> created at line 74.
+    Found 10-bit comparator greater for signal <countX[9]_PWR_6_o_LessThan_3_o> created at line 52
+    Found 10-bit comparator lessequal for signal <n0004> created at line 54
+    Found 10-bit comparator greater for signal <countX[9]_PWR_6_o_LessThan_6_o> created at line 54
+    Found 9-bit comparator lessequal for signal <n0009> created at line 55
+    Found 9-bit comparator greater for signal <countY[8]_PWR_6_o_LessThan_8_o> created at line 55
+    Found 10-bit comparator greater for signal <n0014> created at line 64
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  19 D-type flip-flop(s).
+	inferred   6 Comparator(s).
+	inferred   1 Multiplexer(s).
+Unit <VGA_Driver640x480> synthesized.
+
+Synthesizing Unit <captura_datos_downsampler>.
+    Related source file is "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/captura_datos_downsampler.v".
+    Found 11-bit adder for signal <lengthimage[10]_GND_7_o_add_6_OUT> created at line 45.
+    Found 15-bit adder for signal <DP_RAM_addr_out[14]_GND_7_o_add_14_OUT> created at line 63.
+    Found 11-bit adder for signal <widthimage[10]_GND_7_o_add_15_OUT> created at line 67.
+    Found 1-bit 4-to-1 multiplexer for signal <FSM_state<1>> created at line 28.
+    Found 1-bit 4-to-1 multiplexer for signal <FSM_state<0>> created at line 28.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_regW>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<12>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<11>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_addr_out<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <lengthimage<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <pixel_half>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rgb<15>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rgb<14>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rgb<13>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rgb<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rgb<9>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <temp_rgb<8>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<7>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<6>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<5>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<4>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<3>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<2>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<1>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <DP_RAM_data_out<0>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+WARNING:Xst:737 - Found 1-bit latch for signal <widthimage<10>>. Latches may be generated from incomplete case or if statements. We do not recommend the use of latches in FPGA/CPLD designs, as they may lead to timing problems.
+    Summary:
+	inferred   3 Adder/Subtractor(s).
+	inferred  53 Latch(s).
+	inferred  16 Multiplexer(s).
+Unit <captura_datos_downsampler> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32768x8-bit dual-port RAM                             : 1
+# Multipliers                                          : 1
+ 9x7-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 6
+ 10-bit adder                                          : 1
+ 11-bit adder                                          : 2
+ 15-bit adder                                          : 1
+ 16-bit adder                                          : 1
+ 9-bit adder                                           : 1
+# Registers                                            : 3
+ 10-bit register                                       : 1
+ 8-bit register                                        : 1
+ 9-bit register                                        : 1
+# Latches                                              : 53
+ 1-bit latch                                           : 53
+# Comparators                                          : 8
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 1
+ 9-bit comparator greater                              : 2
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 18
+ 1-bit 2-to-1 multiplexer                              : 11
+ 1-bit 4-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <VGA_Driver640x480>.
+The following registers are absorbed into counter <countX>: 1 register on signal <countX>.
+The following registers are absorbed into counter <countY>: 1 register on signal <countY>.
+Unit <VGA_Driver640x480> synthesized (advanced).
+
+Synthesizing (advanced) Unit <buffer_ram_dp>.
+INFO:Xst:3226 - The RAM <Mram_ram> will be implemented as a BLOCK RAM, absorbing the following register(s): <data_out>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk_w>         | rise     |
+    |     weA            | connected to signal <regwrite>      | high     |
+    |     addrA          | connected to signal <addr_in>       |          |
+    |     diA            | connected to signal <data_in>       |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+    | Port B                                                              |
+    |     aspect ratio   | 32768-word x 8-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkB           | connected to signal <clk_r>         | rise     |
+    |     addrB          | connected to signal <addr_out>      |          |
+    |     doB            | connected to signal <data_out>      |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <buffer_ram_dp> synthesized (advanced).
+
+Synthesizing (advanced) Unit <test_cam>.
+	Multiplier <Mmult_n0029> in block <test_cam> and adder/subtractor <Madd_n0023_Madd> in block <test_cam> are combined into a MAC<Maddsub_n0029>.
+Unit <test_cam> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 32768x8-bit dual-port block RAM                       : 1
+# MACs                                                 : 1
+ 9x7-to-15-bit MAC                                     : 1
+# Adders/Subtractors                                   : 3
+ 11-bit adder                                          : 2
+ 15-bit adder                                          : 1
+# Counters                                             : 2
+ 10-bit up counter                                     : 1
+ 9-bit up counter                                      : 1
+# Comparators                                          : 8
+ 10-bit comparator greater                             : 4
+ 10-bit comparator lessequal                           : 1
+ 9-bit comparator greater                              : 2
+ 9-bit comparator lessequal                            : 1
+# Multiplexers                                         : 18
+ 1-bit 2-to-1 multiplexer                              : 11
+ 1-bit 4-to-1 multiplexer                              : 2
+ 11-bit 2-to-1 multiplexer                             : 2
+ 15-bit 2-to-1 multiplexer                             : 2
+ 8-bit 2-to-1 multiplexer                              : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+WARNING:Xst:2170 - Unit captura_datos_downsampler : the following signal(s) form a combinatorial loop: FSM_state<0>1.
+WARNING:Xst:2170 - Unit captura_datos_downsampler : the following signal(s) form a combinatorial loop: FSM_state<1>1.
+
+Optimizing unit <test_cam> ...
+
+Optimizing unit <captura_datos_downsampler> ...
+
+Optimizing unit <VGA_Driver640x480> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block test_cam, actual ratio is 2.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 20
+ Flip-Flops                                            : 20
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : test_cam.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 195
+#      GND                         : 1
+#      INV                         : 5
+#      LUT1                        : 31
+#      LUT2                        : 40
+#      LUT3                        : 9
+#      LUT4                        : 9
+#      LUT5                        : 5
+#      LUT6                        : 29
+#      MUXCY                       : 31
+#      VCC                         : 1
+#      XORCY                       : 34
+# FlipFlops/Latches                : 73
+#      FD                          : 1
+#      FDR                         : 10
+#      FDRE                        : 9
+#      LD                          : 53
+# RAMS                             : 16
+#      RAMB16BWER                  : 16
+# Clock Buffers                    : 4
+#      BUFG                        : 4
+# IO Buffers                       : 30
+#      IBUF                        : 12
+#      IBUFG                       : 1
+#      OBUF                        : 17
+# DSPs                             : 1
+#      DSP48A1                     : 1
+# Others                           : 1
+#      MMCME2_ADV                  : 1
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 6slx9tqg144-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              65  out of  11440     0%  
+ Number of Slice LUTs:                  128  out of   5720     2%  
+    Number used as Logic:               128  out of   5720     2%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:    143
+   Number with an unused Flip Flop:      78  out of    143    54%  
+   Number with an unused LUT:            15  out of    143    10%  
+   Number of fully used LUT-FF pairs:    50  out of    143    34%  
+   Number of unique control sets:        10
+
+IO Utilization: 
+ Number of IOs:                          30
+ Number of bonded IOBs:                  30  out of    102    29%  
+    IOB Flip Flops/Latches:               8
+
+Specific Feature Utilization:
+ Number of Block RAM/FIFO:               16  out of     32    50%  
+    Number using Block RAM only:         16
+ Number of BUFG/BUFGCTRLs:                4  out of     16    25%  
+ Number of DSP48A1s:                      1  out of     16     6%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+Clock Signal                                                                                                                 | Clock buffer(FF name)                               | Load  |
+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+clk25_24/clkout0                                                                                                             | BUFG                                                | 37    |
+captura_datos_downsampler/FSM_state[1]_PWR_19_o_Mux_47_o(captura_datos_downsampler/Mmux_FSM_state[1]_PWR_19_o_Mux_47_o11:O)  | NONE(*)(captura_datos_downsampler/DP_RAM_regW)      | 1     |
+captura_datos_downsampler/FSM_state[1]_GND_63_o_Mux_108_o(captura_datos_downsampler/Mmux_FSM_state[1]_GND_63_o_Mux_108_o11:O)| NONE(*)(captura_datos_downsampler/DP_RAM_data_out_3)| 8     |
+captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o(captura_datos_downsampler/Mmux_FSM_state[1]_GND_46_o_Mux_74_o11:O)  | NONE(*)(captura_datos_downsampler/pixel_half)       | 1     |
+captura_datos_downsampler/FSM_state[1]_GND_47_o_Mux_76_o(captura_datos_downsampler/Mmux_FSM_state[1]_GND_47_o_Mux_76_o11:O)  | NONE(*)(captura_datos_downsampler/temp_rgb_9)       | 6     |
+captura_datos_downsampler/FSM_state<0>1(captura_datos_downsampler/Mmux_FSM_state<0>2401:O)                                   | NONE(*)(captura_datos_downsampler/lengthimage_0)    | 11    |
+captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o(captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o1:O)        | NONE(*)(captura_datos_downsampler/DP_RAM_addr_out_1)| 15    |
+captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o(captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o1:O)          | NONE(*)(captura_datos_downsampler/widthimage_10)    | 11    |
+clk                                                                                                                          | IBUFG                                               | 16    |
+-----------------------------------------------------------------------------------------------------------------------------+-----------------------------------------------------+-------+
+(*) These 7 clock signal(s) are generated by combinatorial logic,
+and XST is not able to identify which are the primary clock signals.
+Please use the CLOCK_SIGNAL constraint to specify the clock signal(s) generated by combinatorial logic.
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 7.662ns (Maximum Frequency: 130.510MHz)
+   Minimum input arrival time before clock: 7.193ns
+   Maximum output required time after clock: 6.127ns
+   Maximum combinational path delay: 2.078ns
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk25_24/clkout0'
+  Clock period: 7.662ns (frequency: 130.510MHz)
+  Total number of paths / destination ports: 5080 / 274
+-------------------------------------------------------------------------
+Delay:               7.662ns (Levels of Logic = 2)
+  Source:            VGA640x480/countY_8 (FF)
+  Destination:       DP_RAM/Mram_ram1 (RAM)
+  Source Clock:      clk25_24/clkout0 rising
+  Destination Clock: clk25_24/clkout0 rising
+
+  Data Path: VGA640x480/countY_8 to DP_RAM/Mram_ram1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDRE:C->Q             4   0.447   0.683  VGA640x480/countY_8 (VGA640x480/countY_8)
+     DSP48A1:B8->P13       1   4.394   0.580  Maddsub_n0029 (n0023<13>)
+     LUT2:I1->O           16   0.205   1.004  Mmux_DP_RAM_addr_out51 (DP_RAM_addr_out<13>)
+     RAMB16BWER:ADDRB13        0.350          DP_RAM/Mram_ram1
+    ----------------------------------------
+    Total                      7.662ns (5.396ns logic, 2.266ns route)
+                                       (70.4% logic, 29.6% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o'
+  Clock period: 2.121ns (frequency: 471.387MHz)
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.121ns (Levels of Logic = 1)
+  Source:            captura_datos_downsampler/pixel_half (LATCH)
+  Destination:       captura_datos_downsampler/pixel_half (LATCH)
+  Source Clock:      captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o falling
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o falling
+
+  Data Path: captura_datos_downsampler/pixel_half to captura_datos_downsampler/pixel_half
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               8   0.498   0.802  captura_datos_downsampler/pixel_half (captura_datos_downsampler/pixel_half)
+     INV:I->O              1   0.206   0.579  captura_datos_downsampler/GND_7_o_GND_7_o_equal_14_o1_INV_0 (captura_datos_downsampler/GND_7_o_GND_7_o_equal_14_o)
+     LD:D                      0.037          captura_datos_downsampler/pixel_half
+    ----------------------------------------
+    Total                      2.121ns (0.741ns logic, 1.380ns route)
+                                       (34.9% logic, 65.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'captura_datos_downsampler/FSM_state<0>1'
+  Clock period: 7.278ns (frequency: 137.400MHz)
+  Total number of paths / destination ports: 308 / 11
+-------------------------------------------------------------------------
+Delay:               7.278ns (Levels of Logic = 6)
+  Source:            captura_datos_downsampler/lengthimage_9 (LATCH)
+  Destination:       captura_datos_downsampler/lengthimage_0 (LATCH)
+  Source Clock:      captura_datos_downsampler/FSM_state<0>1 rising
+  Destination Clock: captura_datos_downsampler/FSM_state<0>1 rising
+
+  Data Path: captura_datos_downsampler/lengthimage_9 to captura_datos_downsampler/lengthimage_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.498   0.995  captura_datos_downsampler/lengthimage_9 (captura_datos_downsampler/lengthimage_9)
+     LUT6:I1->O            1   0.203   0.580  captura_datos_downsampler/GND_7_o_PWR_7_o_mux_8_OUT[1]<10>_SW0 (N51)
+     LUT6:I5->O            2   0.205   0.617  captura_datos_downsampler/GND_7_o_PWR_7_o_mux_8_OUT[1]<10> (captura_datos_downsampler/GND_7_o_PWR_7_o_mux_8_OUT[1])
+     LUT6:I5->O            6   0.205   0.745  captura_datos_downsampler/Mmux_FSM_state<0>12 (captura_datos_downsampler/Mmux_FSM_state<0>)
+     LUT4:I3->O            6   0.205   1.089  captura_datos_downsampler/Mmux_FSM_state<0>2401 (captura_datos_downsampler/FSM_state<0>1)
+     LUT6:I1->O           46   0.203   1.491  captura_datos_downsampler/Mmux_FSM_state<0>21 (captura_datos_downsampler/FSM_state<1>1)
+     LUT6:I5->O            1   0.205   0.000  captura_datos_downsampler/Mmux_FSM_state<0>2381 (captura_datos_downsampler/FSM_state[1]_lengthimage[10]_wide_mux_32_OUT<9>)
+     LD:D                      0.037          captura_datos_downsampler/lengthimage_9
+    ----------------------------------------
+    Total                      7.278ns (1.761ns logic, 5.517ns route)
+                                       (24.2% logic, 75.8% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o'
+  Clock period: 3.152ns (frequency: 317.294MHz)
+  Total number of paths / destination ports: 120 / 15
+-------------------------------------------------------------------------
+Delay:               3.152ns (Levels of Logic = 17)
+  Source:            captura_datos_downsampler/DP_RAM_addr_out_0 (LATCH)
+  Destination:       captura_datos_downsampler/DP_RAM_addr_out_14 (LATCH)
+  Source Clock:      captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o falling
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o falling
+
+  Data Path: captura_datos_downsampler/DP_RAM_addr_out_0 to captura_datos_downsampler/DP_RAM_addr_out_14
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q              17   0.498   1.027  captura_datos_downsampler/DP_RAM_addr_out_0 (captura_datos_downsampler/DP_RAM_addr_out_0)
+     INV:I->O              1   0.206   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_lut<0>_INV_0 (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_lut<0>)
+     MUXCY:S->O            1   0.172   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<0> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<0>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<1> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<1>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<2> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<2>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<3> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<3>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<4> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<4>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<5> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<5>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<6> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<6>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<7> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<7>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<8> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<8>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<9> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<9>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<10> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<10>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<11> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<11>)
+     MUXCY:CI->O           1   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<12> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<12>)
+     MUXCY:CI->O           0   0.019   0.000  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<13> (captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_cy<13>)
+     XORCY:CI->O           1   0.180   0.580  captura_datos_downsampler/Madd_DP_RAM_addr_out[14]_GND_7_o_add_14_OUT_xor<14> (captura_datos_downsampler/DP_RAM_addr_out[14]_GND_7_o_add_14_OUT<14>)
+     LUT2:I1->O            1   0.205   0.000  captura_datos_downsampler/Mmux_FSM_state<0>271 (captura_datos_downsampler/FSM_state[1]_DP_RAM_addr_out[14]_wide_mux_31_OUT<14>)
+     LD:D                      0.037          captura_datos_downsampler/DP_RAM_addr_out_14
+    ----------------------------------------
+    Total                      3.152ns (1.545ns logic, 1.607ns route)
+                                       (49.0% logic, 51.0% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o'
+  Clock period: 7.506ns (frequency: 133.227MHz)
+  Total number of paths / destination ports: 308 / 11
+-------------------------------------------------------------------------
+Delay:               7.506ns (Levels of Logic = 6)
+  Source:            captura_datos_downsampler/widthimage_9 (LATCH)
+  Destination:       captura_datos_downsampler/widthimage_10 (LATCH)
+  Source Clock:      captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o falling
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o falling
+
+  Data Path: captura_datos_downsampler/widthimage_9 to captura_datos_downsampler/widthimage_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     LD:G->Q               3   0.498   0.995  captura_datos_downsampler/widthimage_9 (captura_datos_downsampler/widthimage_9)
+     LUT6:I1->O            1   0.203   0.580  captura_datos_downsampler/GND_7_o_PWR_7_o_mux_17_OUT[1]<10>_SW0 (N53)
+     LUT6:I5->O            2   0.205   0.845  captura_datos_downsampler/GND_7_o_PWR_7_o_mux_17_OUT[1]<10> (captura_datos_downsampler/GND_7_o_PWR_7_o_mux_17_OUT[1])
+     LUT6:I3->O            6   0.205   0.745  captura_datos_downsampler/Mmux_FSM_state<0>12 (captura_datos_downsampler/Mmux_FSM_state<0>)
+     LUT4:I3->O            6   0.205   1.089  captura_datos_downsampler/Mmux_FSM_state<0>2401 (captura_datos_downsampler/FSM_state<0>1)
+     LUT6:I1->O           46   0.203   1.491  captura_datos_downsampler/Mmux_FSM_state<0>21 (captura_datos_downsampler/FSM_state<1>1)
+     LUT6:I5->O            1   0.205   0.000  captura_datos_downsampler/Mmux_FSM_state<0>2271 (captura_datos_downsampler/FSM_state[1]_GND_7_o_wide_mux_29_OUT<9>)
+     LD:D                      0.037          captura_datos_downsampler/widthimage_9
+    ----------------------------------------
+    Total                      7.506ns (1.761ns logic, 5.745ns route)
+                                       (23.5% logic, 76.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/clkout0'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              3.698ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       VGA640x480/countX_0 (FF)
+  Destination Clock: clk25_24/clkout0 rising
+
+  Data Path: rst to VGA640x480/countX_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.961  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           11   0.203   0.882  VGA640x480/Mcount_countX_val1 (VGA640x480/Mcount_countX_val)
+     FDR:R                     0.430          VGA640x480/countX_0
+    ----------------------------------------
+    Total                      3.698ns (1.855ns logic, 1.843ns route)
+                                       (50.2% logic, 49.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'captura_datos_downsampler/FSM_state[1]_PWR_19_o_Mux_47_o'
+  Total number of paths / destination ports: 10 / 1
+-------------------------------------------------------------------------
+Offset:              7.193ns (Levels of Logic = 6)
+  Source:            pclk (PAD)
+  Destination:       captura_datos_downsampler/DP_RAM_regW (LATCH)
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_PWR_19_o_Mux_47_o falling
+
+  Data Path: pclk to captura_datos_downsampler/DP_RAM_regW
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.803  pclk_IBUF (pclk_IBUF)
+     LUT2:I1->O            1   0.205   0.684  captura_datos_downsampler/Mmux_FSM_state<0>12_SW0 (N39)
+     LUT6:I4->O            6   0.203   0.745  captura_datos_downsampler/Mmux_FSM_state<0>12 (captura_datos_downsampler/Mmux_FSM_state<0>)
+     LUT4:I3->O            6   0.205   1.089  captura_datos_downsampler/Mmux_FSM_state<0>2401 (captura_datos_downsampler/FSM_state<0>1)
+     LUT6:I1->O           46   0.203   1.595  captura_datos_downsampler/Mmux_FSM_state<0>21 (captura_datos_downsampler/FSM_state<1>1)
+     LUT3:I1->O            1   0.203   0.000  captura_datos_downsampler/Mmux_FSM_state[1]_GND_7_o_Mux_30_o11 (captura_datos_downsampler/FSM_state[1]_GND_7_o_Mux_30_o)
+     LD:D                      0.037          captura_datos_downsampler/DP_RAM_regW
+    ----------------------------------------
+    Total                      7.193ns (2.278ns logic, 4.915ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'captura_datos_downsampler/FSM_state[1]_GND_63_o_Mux_108_o'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              1.838ns (Levels of Logic = 1)
+  Source:            data<3> (PAD)
+  Destination:       captura_datos_downsampler/DP_RAM_data_out_0 (LATCH)
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_GND_63_o_Mux_108_o falling
+
+  Data Path: data<3> to captura_datos_downsampler/DP_RAM_data_out_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_3_IBUF (data_3_IBUF)
+     LD:D                      0.037          captura_datos_downsampler/DP_RAM_data_out_0
+    ----------------------------------------
+    Total                      1.838ns (1.259ns logic, 0.579ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'captura_datos_downsampler/FSM_state[1]_GND_47_o_Mux_76_o'
+  Total number of paths / destination ports: 6 / 6
+-------------------------------------------------------------------------
+Offset:              1.838ns (Levels of Logic = 1)
+  Source:            data<1> (PAD)
+  Destination:       captura_datos_downsampler/temp_rgb_9 (LATCH)
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_GND_47_o_Mux_76_o falling
+
+  Data Path: data<1> to captura_datos_downsampler/temp_rgb_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   1.222   0.579  data_1_IBUF (data_1_IBUF)
+     LD:D                      0.037          captura_datos_downsampler/temp_rgb_9
+    ----------------------------------------
+    Total                      1.838ns (1.259ns logic, 0.579ns route)
+                                       (68.5% logic, 31.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'captura_datos_downsampler/FSM_state<0>1'
+  Total number of paths / destination ports: 77 / 11
+-------------------------------------------------------------------------
+Offset:              7.091ns (Levels of Logic = 6)
+  Source:            pclk (PAD)
+  Destination:       captura_datos_downsampler/lengthimage_0 (LATCH)
+  Destination Clock: captura_datos_downsampler/FSM_state<0>1 rising
+
+  Data Path: pclk to captura_datos_downsampler/lengthimage_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.803  pclk_IBUF (pclk_IBUF)
+     LUT2:I1->O            1   0.205   0.684  captura_datos_downsampler/Mmux_FSM_state<0>12_SW0 (N39)
+     LUT6:I4->O            6   0.203   0.745  captura_datos_downsampler/Mmux_FSM_state<0>12 (captura_datos_downsampler/Mmux_FSM_state<0>)
+     LUT4:I3->O            6   0.205   1.089  captura_datos_downsampler/Mmux_FSM_state<0>2401 (captura_datos_downsampler/FSM_state<0>1)
+     LUT6:I1->O           46   0.203   1.491  captura_datos_downsampler/Mmux_FSM_state<0>21 (captura_datos_downsampler/FSM_state<1>1)
+     LUT6:I5->O            1   0.205   0.000  captura_datos_downsampler/Mmux_FSM_state<0>2381 (captura_datos_downsampler/FSM_state[1]_lengthimage[10]_wide_mux_32_OUT<9>)
+     LD:D                      0.037          captura_datos_downsampler/lengthimage_9
+    ----------------------------------------
+    Total                      7.091ns (2.280ns logic, 4.811ns route)
+                                       (32.2% logic, 67.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o'
+  Total number of paths / destination ports: 105 / 15
+-------------------------------------------------------------------------
+Offset:              7.193ns (Levels of Logic = 6)
+  Source:            pclk (PAD)
+  Destination:       captura_datos_downsampler/DP_RAM_addr_out_1 (LATCH)
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o falling
+
+  Data Path: pclk to captura_datos_downsampler/DP_RAM_addr_out_1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.803  pclk_IBUF (pclk_IBUF)
+     LUT2:I1->O            1   0.205   0.684  captura_datos_downsampler/Mmux_FSM_state<0>12_SW0 (N39)
+     LUT6:I4->O            6   0.203   0.745  captura_datos_downsampler/Mmux_FSM_state<0>12 (captura_datos_downsampler/Mmux_FSM_state<0>)
+     LUT4:I3->O            6   0.205   1.089  captura_datos_downsampler/Mmux_FSM_state<0>2401 (captura_datos_downsampler/FSM_state<0>1)
+     LUT6:I1->O           46   0.203   1.595  captura_datos_downsampler/Mmux_FSM_state<0>21 (captura_datos_downsampler/FSM_state<1>1)
+     LUT2:I0->O            1   0.203   0.000  captura_datos_downsampler/Mmux_FSM_state<0>221 (captura_datos_downsampler/FSM_state[1]_DP_RAM_addr_out[14]_wide_mux_31_OUT<0>)
+     LD:D                      0.037          captura_datos_downsampler/DP_RAM_addr_out_0
+    ----------------------------------------
+    Total                      7.193ns (2.278ns logic, 4.915ns route)
+                                       (31.7% logic, 68.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o'
+  Total number of paths / destination ports: 77 / 11
+-------------------------------------------------------------------------
+Offset:              7.091ns (Levels of Logic = 6)
+  Source:            pclk (PAD)
+  Destination:       captura_datos_downsampler/widthimage_10 (LATCH)
+  Destination Clock: captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o falling
+
+  Data Path: pclk to captura_datos_downsampler/widthimage_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             8   1.222   0.803  pclk_IBUF (pclk_IBUF)
+     LUT2:I1->O            1   0.205   0.684  captura_datos_downsampler/Mmux_FSM_state<0>12_SW0 (N39)
+     LUT6:I4->O            6   0.203   0.745  captura_datos_downsampler/Mmux_FSM_state<0>12 (captura_datos_downsampler/Mmux_FSM_state<0>)
+     LUT4:I3->O            6   0.205   1.089  captura_datos_downsampler/Mmux_FSM_state<0>2401 (captura_datos_downsampler/FSM_state<0>1)
+     LUT6:I1->O           46   0.203   1.491  captura_datos_downsampler/Mmux_FSM_state<0>21 (captura_datos_downsampler/FSM_state<1>1)
+     LUT6:I5->O            1   0.205   0.000  captura_datos_downsampler/Mmux_FSM_state<0>2271 (captura_datos_downsampler/FSM_state[1]_GND_7_o_wide_mux_29_OUT<9>)
+     LD:D                      0.037          captura_datos_downsampler/widthimage_9
+    ----------------------------------------
+    Total                      7.091ns (2.280ns logic, 4.811ns route)
+                                       (32.2% logic, 67.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/clkout0'
+  Total number of paths / destination ports: 62 / 10
+-------------------------------------------------------------------------
+Offset:              6.127ns (Levels of Logic = 2)
+  Source:            DP_RAM/Mram_ram16 (RAM)
+  Destination:       VGA_R<3> (PAD)
+  Source Clock:      clk25_24/clkout0 rising
+
+  Data Path: DP_RAM/Mram_ram16 to VGA_R<3>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     RAMB16BWER:CLKB->DOB0    1   1.850   0.924  DP_RAM/Mram_ram16 (N35)
+     LUT6:I1->O            1   0.203   0.579  VGA640x480/Mmux_pixelOut81 (VGA_R_3_OBUF)
+     OBUF:I->O                 2.571          VGA_R_3_OBUF (VGA_R<3>)
+    ----------------------------------------
+    Total                      6.127ns (4.624ns logic, 1.503ns route)
+                                       (75.5% logic, 24.5% route)
+
+=========================================================================
+Timing constraint: Default path analysis
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Delay:               2.078ns (Levels of Logic = 1)
+  Source:            rst (PAD)
+  Destination:       clk25_24/mmcm_adv_inst:RST (PAD)
+
+  Data Path: rst to clk25_24/mmcm_adv_inst:RST
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            10   1.222   0.856  rst_IBUF (rst_IBUF)
+    MMCME2_ADV:RST             0.000          clk25_24/mmcm_adv_inst
+    ----------------------------------------
+    Total                      2.078ns (1.222ns logic, 0.856ns route)
+                                       (58.8% logic, 41.2% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock captura_datos_downsampler/FSM_state<0>1
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state<0>1                 |    7.278|         |         |         |
+captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o|         |    6.469|         |         |
+captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o |         |    7.506|         |         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state<0>1                 |         |         |    7.380|         |
+captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o|         |         |    3.152|         |
+captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o|         |         |    6.571|         |
+captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o |         |         |    7.608|         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o|         |         |    2.121|         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock captura_datos_downsampler/FSM_state[1]_GND_63_o_Mux_108_o
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state[1]_GND_47_o_Mux_76_o|         |         |    1.114|         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock captura_datos_downsampler/FSM_state[1]_PWR_19_o_Mux_47_o
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state<0>1                 |         |         |    7.380|         |
+captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o|         |         |    6.571|         |
+captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o |         |         |    7.608|         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o
+--------------------------------------------------------+---------+---------+---------+---------+
+                                                        | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                            |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+--------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state<0>1                 |         |         |    7.278|         |
+captura_datos_downsampler/FSM_state[1]_GND_46_o_Mux_74_o|         |         |    6.469|         |
+captura_datos_downsampler/FSM_state[1]_PWR_9_o_Mux_37_o |         |         |    7.506|         |
+--------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------------------------------------------------+---------+---------+---------+---------+
+                                                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                                             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------------------------------------------------+---------+---------+---------+---------+
+captura_datos_downsampler/FSM_state[1]_GND_20_o_Mux_48_o |         |    3.047|         |         |
+captura_datos_downsampler/FSM_state[1]_GND_63_o_Mux_108_o|         |    1.414|         |         |
+captura_datos_downsampler/FSM_state[1]_PWR_19_o_Mux_47_o |         |    2.911|         |         |
+---------------------------------------------------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk25_24/clkout0
+----------------+---------+---------+---------+---------+
+                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock    |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------+---------+---------+---------+---------+
+clk25_24/clkout0|    7.662|         |         |         |
+----------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 7.00 secs
+Total CPU time to Xst completion: 6.81 secs
+ 
+--> 
+
+
+Total memory usage is 396640 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   97 (   0 filtered)
+Number of infos    :    3 (   0 filtered)
+
