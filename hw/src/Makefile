@@ -15,7 +15,7 @@ SIMGEN_OPTIONS  = -p $(FPGA_ARCH) -lang $(LANGUAGE)
 IVERILOG        = iverilog
 
 
-SRC             = $(DESIGN).v	VGA_driver.v	divisor.v	buffer_ram_dp.v	captura_datos_downsampler.v
+SRC             = $(DESIGN).v	VGA_driver.v clk24_25_nexys4.v	buffer_ram_dp.v	captura_datos_downsampler.v
 SIM_SRC 		= $(DESIGN)_TB.v          \
 
 #---------------------------------------------------------------------------------------------------------------------------------

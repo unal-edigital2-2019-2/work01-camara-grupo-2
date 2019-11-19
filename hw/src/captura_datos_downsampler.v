@@ -4,49 +4,50 @@ module captura_datos_downsampler (
 	input pclk,
 	input vsync,
 	
-	output reg [14:0] DP_RAM_addr_out = 0,
-	output reg [7:0] DP_RAM_data_out,
+	output reg [14:0] DP_RAM_addr_out = -1,
+	output reg [7:0] DP_RAM_data_out ,
 	output reg DP_RAM_regW //autoriza escritura en la dpram
 );
 
 	reg  [1:0] FSM_state = 0; //CUATRO estados =  00: WAIT_FRAME_START &  01: ROW_CAPTURE & 11 DATA_OUT_RANGE EN LA FILA & 10: DONE ha enviado la imagen de (160x120) pero sigue recibiendo porque la camara envia (480x260)
     reg pixel_half = 0; //indica 0:medio pixel y 1 :pixel completo 
-	reg [15:0] temp_rgb; //registro temporal para guardar pixel completo, asumiendo RGB555
+	reg [15:0] temp_rgb  ; //registro temporal para guardar pixel completo, asumiendo RGB555
 	reg [10:0] widthimage = 0 ; // registro que lleva el conteo del ancho de pixeles enviados (en 160 debe dentenerse)
 	reg [10:0] lengthimage = 0; // registro que lleva la cuenta de filas de pixeles enviadas (en 120 debe detenerse)
 
-	localparam Maxwidthimage = 16;  // tamaño maximo del ancho de la imagen 
-	localparam Maxlengthimage = 12;    // tamaño maximo en largo de la imagen
+	localparam Maxwidthimage = 176;  // tamaño maximo del ancho de la imagen 
+	localparam Maxlengthimage = 144;    // tamaño maximo en largo de la imagen
 	localparam WAIT_FRAME_START = 0;
 	localparam ROW_CAPTURE = 1;
 	localparam DATA_OUT_RANGE = 3;
 	localparam DONE =  2;
 	
 	
-	always @(posedge pclk)
+	always @( pclk)
 	begin 
 
 	case(FSM_state)
 
 	DONE:begin // ENVIE TODA LA IAMGEN(160x120) A LA MEMORIA , ESPERO HASATA OTRA IMAGEN
-		FSM_state <= (!vsync)? DONE : WAIT_FRAME_START;
+		FSM_state <= (vsync==0)? DONE : ROW_CAPTURE;
+		DP_RAM_regW <= 0;
 		DP_RAM_addr_out <= 0;
 			lengthimage <= 0;
 	end
 	DATA_OUT_RANGE : begin //  me estan enviadno datos que estan fueran del rango (160x120)no debo enviarlos a la memoria
-	 FSM_state <= (!href)?  DATA_OUT_RANGE : WAIT_FRAME_START ;
+	 FSM_state <= (href==1)?  DATA_OUT_RANGE : ROW_CAPTURE ;
 	 widthimage <= 0 ;
 	 DP_RAM_regW <= 0;
 	 
 	end
 	WAIT_FRAME_START: begin //wait for VSYNC
-	   FSM_state <= (!vsync) ? ROW_CAPTURE : WAIT_FRAME_START;
-	   pixel_half <= 0;
+	   FSM_state <= (href==0) ? WAIT_FRAME_START : ROW_CAPTURE;
+	   DP_RAM_regW <= 0 ;
 	end
 	
 	ROW_CAPTURE: begin 
-	   	FSM_state <= (vsync)? WAIT_FRAME_START : ROW_CAPTURE; 
-		if (pclk == 1) begin
+	   	FSM_state <= (vsync==0 && href==1)? ROW_CAPTURE : WAIT_FRAME_START; 
+		if (pclk ==1) begin
 		pixel_half <= ~ pixel_half;
 		
 			if (pixel_half == 0) begin
@@ -61,14 +62,13 @@ module captura_datos_downsampler (
 				if (widthimage  == Maxwidthimage-1) begin
 						FSM_state <= DATA_OUT_RANGE ;
 				end 
-				if ( href ) begin
+				
+				if ( href == 0) begin
 					lengthimage <= lengthimage +1;
 					if(lengthimage == Maxlengthimage-1)begin
 					 FSM_state <= DONE;
 					end
-
-				end 
-				
+				end 				
 			end
 
 	   	end
@@ -82,7 +82,15 @@ module captura_datos_downsampler (
 		end
 */
 	end
-	
+
+	always @(negedge href)begin
+	lengthimage <= lengthimage +1;
+			DP_RAM_regW <=0 ;
+				if(lengthimage == Maxlengthimage-1)begin
+					 FSM_state <= DONE;
+				end
+		
+	end
 endmodule
 
 /*****************************************************************

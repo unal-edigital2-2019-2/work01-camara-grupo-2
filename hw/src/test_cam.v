@@ -68,7 +68,7 @@ assign VGA_B = {data_RGB332[1:0],2'b00};
 Asignación de las señales de control xclk pwdn y reset de la camara 
 **************************************************************************** */
 
-assign CAM_xclk =  clk25M;    // debe ir a 24Mhz con el PLL y con el divisor va a 25Mhz
+assign CAM_xclk =  clk24M;    // debe ir a clk24Mhz con el PLL y con el divisor va a clk25Mhz
 assign CAM_pwdn=  0 ;			// power down mode 
 assign CAM_reset=  0  ;
 
@@ -82,7 +82,7 @@ assign CAM_reset=  0  ;
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
 assign clk32M =clk;
-/*
+
 clk24_25_nexys4
   clk25_24(
   .CLK_IN1(clk),
@@ -90,17 +90,18 @@ clk24_25_nexys4
   .CLK_OUT2(clk24M),
   .RESET(rst)
  );
-*/
+
 /* ***************************************************************************
 Prueba con modulo de divisor de frecuencia salida de 25Mhz
 **************************************************************************** */
+/*
 divisor divisor(
 	 
 	.clki(clk),
 	.clko(clk25M)	
 
 );
-
+*/
 
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
@@ -158,7 +159,8 @@ adicionales seran iguales al color del último pixel de memoria
 **************************************************************************** */
 always @ (VGA_posX, VGA_posY) begin
 		if ((VGA_posX>CAM_SCREEN_X-1) || (VGA_posY>CAM_SCREEN_Y-1))
-			DP_RAM_addr_out=CAM_SCREEN_X*CAM_SCREEN_Y;
+			DP_RAM_addr_out = 15'b111111111111111;
+			
 		else
 			DP_RAM_addr_out=VGA_posX+VGA_posY*CAM_SCREEN_Y;
 end

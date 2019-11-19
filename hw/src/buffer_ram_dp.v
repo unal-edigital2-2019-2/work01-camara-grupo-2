@@ -35,6 +35,7 @@ end
 
 initial begin
 	$readmemh(imageFILE, ram);
+	ram[15'b111111111111111]=8'b00000011;
 	
 end
 

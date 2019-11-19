@@ -2,9 +2,9 @@ Command line:
    captura_datos_downsampler_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  46653
+     -socket  46409
 
-Tue Nov 12 19:10:26 2019
+Mon Nov 18 17:01:48 2019
 
 
  Elaboration Time: 0.01 sec
