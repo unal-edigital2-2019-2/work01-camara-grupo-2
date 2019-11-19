@@ -1,8 +1,9 @@
 # Primera Entrega: Captura de datos con la cámara.
 ## Introducción:
 
-Para esta entrega se requiere que 
-Se plantean los siguientes módulos:
+Para esta entrega se requiere que la cámara muestre una franja de colores en la pantalla con un tamaño de 176 y 144.
+
+Adicional a los módulos que se plantean originalmente se plantean los siguientes módulos:
 ### Captura_datos_downsampler
 
 
@@ -20,26 +21,22 @@ Funciona con un flanco de subida del reloj y tiene diferentes casos que depende 
 - Caso 3: WAIT_FRAME_START espera por VSYNC
 - Caso 4: ROW_CAPTURE guardar el dato
 
-Para el primer vsync es igual a 0 y con el se inicializan todos los valores; se guarda en DP_RAM_regW, en DP_RAM_addr_out y en lengthimage 0; en caso contrario se inicializa ROW_CAPTURE . 
+Para el primer caso (DONE) ya se ha llenado la memoria,  sin embargo como la cámara sigue tomando imagenes; por lo tanto, si vsync es igual a 0 se mantiene el valor de acabado, es decir no se ha iniciado el proceso de gardar en memoria una nueva imagen y si no se cumple esto si no que vsync es 1 se inicializan todos los valores de nuevo; se guarda en DP_RAM_regW, en DP_RAM_addr_out y en lengthimage 0; y se inicializa ROW_CAPTURE . 
 
-En el segundo caso, si href es 1 en widthimage y DP_RAM_regW se guarda 0; en caso contrario se inicializa ROW_CAPTURE.
+En el segundo caso, si href es 1 se mantiene en caso de que los pixeles se hayan salido del rango; en el caso contrario en widthimage y DP_RAM_regW se guarda 0 inicializando ROW_CAPTURE.
 
-En el tercero si href es 0 y en DP_RAM_regW se guarda 0; en este caso se espera a que vsync esté en 1. En caso contrario, se inicializa ROW_CAPTURE. 
+El tercer estado se mantiene si href es 0. En caso contrario, se inicializa ROW_CAPTURE. 
 
 La captura inicia cuando hay un flanco positivo en el pclk y href. Cuando esto pasa y pixel_half es 0 en temp_rgb se guardan los datos de data y en DP_RAM_regW se guarda 0, con lo cual no se autoriza. De lo contrario la dirección de salida se aumenta en 1, en temp_rgb se guarda data, en DP_RAM_data_out se guardan los tres posibiles registros de temp_rgb, se autoriza la escritura en buffer_dp_ram guardando 1 en DP_RAM_regW y se aumenta el ancho de la imagen. En caso de que se alcance el máximo tamaño se guarda en FSM_state DATA_OUT_RANGE. En caso contrario, se inicializa WAIT_FRAME_START.
 
-Si href es 0 se aumenta el tamaño de la longitud de una pantalla; en caso de que se alcance el tamaño de longitud máxima en 
-FSM_state DONE. 
+Si href es 0 se aumenta el tamaño de la longitud de una pantalla; en caso de que se alcance el tamaño de longitud máxima se guarda en FSM_state DONE. 
  
-Se tiene por último un ciclo con el flanco de bajada de href, se tiene que lengthimage se aumenta en 1, en DP_RAM_regW se guarda 0 y si se alcanza la longitud máxima se termina la captura de datos guardando en FSM_state DONE. 
 
 Para el cambio de RGB565 a RBG332 se usa la siguiente línea: 
 #### DP_RAM_data_out = {temp_rgb[15:13], temp_rgb[10:8],temp_rgb[4:3]}.
 En este caso lo que se hace es tomar los bits más significativos de temp_rgb desde la posición 15 hasta la 11; después se toman los más significativos de la 10 a 5 y los más significativos de la 4 a la 1 y se concatenan en la saldia de ocho caracteres.  
 
 ### test_cam:
-Los cambios aplicados al módulo son los siguientes:
 
-<img docs="https://github.com/unal-edigital2-2019-2/work01-camara-grupo-2/blob/master/docs/figs/test_cam.jpeg" width="200">
 - Se le agregó el módulo del captura_datos_downsampler.
 Esto se hace instanciado sus variables de entrada: data, vsync, href y pclk. Y sus variables de salida: DP_RAM_addr_out, DP_RAM_data_out y DP_RAM_regW. 
