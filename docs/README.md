@@ -6,6 +6,7 @@ Para esta entrega se requiere que la cámara muestre una franja de colores en la
 Adicional a los módulos que se plantean originalmente se plantean los siguientes módulos:
 ### Captura_datos_downsampler
 
+<img src="https://github.com/unal-edigital2-2019-2/work01-camara-grupo-2/blob/master/docs/figs/downsampler.png?raw=true" width = "450">
 
 Este módulo busca hacer la captura del dato para pasarlo a la memoria DP_RAM.
 
@@ -37,6 +38,8 @@ Para el cambio de RGB565 a RBG332 se usa la siguiente línea:
 En este caso lo que se hace es tomar los bits más significativos de temp_rgb desde la posición 15 hasta la 11; después se toman los más significativos de la 10 a 5 y los más significativos de la 4 a la 1 y se concatenan en la saldia de ocho caracteres.  
 
 ### test_cam:
+
+<img src="https://github.com/unal-edigital2-2019-2/work01-camara-grupo-2/blob/master/docs/figs/t_cam.png?raw=true" width = "250">
 
 - Se le agregó el módulo del captura_datos_downsampler.
 Esto se hace instanciado sus variables de entrada: data, vsync, href y pclk. Y sus variables de salida: DP_RAM_addr_out, DP_RAM_data_out y DP_RAM_regW. 
