@@ -40,6 +40,6 @@ En este caso lo que se hace es tomar los bits más significativos de temp_rgb de
 ### test_cam:
 Los cambios aplicados al módulo son los siguientes:
 
-(img scr="https://github.com/unal-edigital2-2019-2/work01-camara-grupo-2/blob/master/docs/figs/test_cam.jpeg"width=200)
+(img scr="https://github.com/unal-edigital2-2019-2/work01-camara-grupo-2/blob/master/docs/figs/test_cam.jpeg" width=200)
 - Se le agregó el módulo del captura_datos_downsampler.
 Esto se hace instanciado sus variables de entrada: data, vsync, href y pclk. Y sus variables de salida: DP_RAM_addr_out, DP_RAM_data_out y DP_RAM_regW. 
