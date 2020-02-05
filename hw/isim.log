@@ -1,5 +1,6 @@
 ISim log file
-Running: /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/captura_datos_downsampler_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/captura_datos_downsampler_isim_beh.wdb 
+Running: /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/cam_read_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/cam_read_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0xfbc00daa)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,12 +12,46 @@ Time resolution is 1 ps
 # run 1000 ns
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
-# isim force add /captura_datos_downsampler/data 01010101 -radix bin
-# isim force add /captura_datos_downsampler/data 01010101 -radix bin
-# isim force add /captura_datos_downsampler/href 0 -radix bin -value 1 -radix bin -time 20 ms -repeat 200 ms
-# isim force add /captura_datos_downsampler/href 0 -radix bin -value 1 -radix bin -time 20 ms -repeat 200 ms
-# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 500 us -repeat 1 ms
-# isim force add /captura_datos_downsampler/pclk 0 -radix bin -value 1 -radix bin -time 500 us -repeat 1 ms
-# isim force add /captura_datos_downsampler/vsync 0 -radix bin -value 1 -radix bin -time 4500 ms -repeat 5 s
-# isim force add /captura_datos_downsampler/vsync 0 -radix bin -value 1 -radix bin -time 4500 ms -repeat 5 s
-# run 5s
+# isim force add /cam_read/pclk 0 -radix bin -value 1 -radix bin -time 250 us -repeat 500 us
+# isim force add /cam_read/pclk 0 -radix bin -value 1 -radix bin -time 250 us -repeat 500 us
+# isim force add /cam_read/rst 0 -radix bin
+# isim force add /cam_read/rst 0 -radix bin
+# isim force add /cam_read/rst 0 -radix bin
+# isim force add /cam_read/vsync 0 -radix bin -value 1 -radix bin -time 100 ms -repeat 1 s
+# isim force add /cam_read/vsync 0 -radix bin -value 1 -radix bin -time 100 ms -repeat 1 s
+# isim force add /cam_read/href 0 -radix bin -value 1 -radix bin -time 180 ms -repeat 200 ms
+# isim force add /cam_read/href 0 -radix bin -value 1 -radix bin -time 180 ms -repeat 200 ms
+# isim force add /cam_read/px_data 00000111 -radix bin -value 11000000 -radix bin -time 1 us -repeat 2 us
+# isim force add /cam_read/px_data 00000111 -radix bin -value 11000000 -radix bin -time 1 us -repeat 2 us
+# run 2s
+# restart
+# isim force add /cam_read/pclk 0 -radix bin -value 1 -radix bin -time 250 us -repeat 500 us
+# isim force add /cam_read/pclk 0 -radix bin -value 1 -radix bin -time 250 us -repeat 500 us
+# isim force add /cam_read/rst 0 -radix bin
+# isim force add /cam_read/rst 0 -radix bin
+# isim force add /cam_read/vsync 0 -radix bin -value 1 -radix bin -time 900 ms -repeat 1 s
+# isim force add /cam_read/vsync 0 -radix bin -value 1 -radix bin -time 900 ms -repeat 1 s
+# isim force add /cam_read/href 0 -radix bin -value 1 -radix bin -time 20 ms -repeat 200 ms
+# isim force add /cam_read/href 0 -radix bin -value 1 -radix bin -time 20 ms -repeat 200 ms
+# isim force add /cam_read/px_data 00000111 -radix bin -value 11000000 -radix bin -time 1 ms -repeat 2 ms
+# isim force add /cam_read/px_data 00000111 -radix bin -value 11000000 -radix bin -time 1 ms -repeat 2 ms
+# run 2s
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+Stopped at time : 19468291667 ps : File "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src/test_cam.v" Line 69
+# restart
+# isim force add /test_cam/clk 0 -radix bin -value 1 -radix bin -time 5 ns -repeat 10 ns
+# isim force add /test_cam/clk 0 -radix bin -value 1 -radix bin -time 5 ns -repeat 10 ns
+# isim force add /test_cam/rst 0 -radix bin
+# isim force add /test_cam/rst 0 -radix bin
+# isim force add /test_cam/CAM_pclk 0 -radix bin -value 1 -radix bin -time 2500 ns -repeat 5 us
+# isim force add /test_cam/CAM_pclk 0 -radix bin -value 1 -radix bin -time 2500 ns -repeat 5 us
+# isim force add /test_cam/CAM_vsync 0 -radix bin -value 1 -radix bin -time 180 ms -repeat 200 ms
+# isim force add /test_cam/CAM_vsync 0 -radix bin -value 1 -radix bin -time 180 ms -repeat 200 ms
+# isim force add /test_cam/CAM_href 0 -radix bin -value 1 -radix bin -time 200 us -repeat 2 ms
+# isim force add /test_cam/CAM_href 0 -radix bin -value 1 -radix bin -time 200 us -repeat 2 ms
+# isim force add /test_cam/CAM_px_data 00000111 -radix bin -value 11000000 -radix bin -time 10 us -repeat 20 us
+# isim force add /test_cam/CAM_px_data 00000111 -radix bin -value 11000000 -radix bin -time 10 us -repeat 20 us
+# run 500ms
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.

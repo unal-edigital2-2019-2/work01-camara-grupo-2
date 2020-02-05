@@ -1,0 +1,115 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -v 25 project_r.ncd
+project.pcf
+
+Design file:              project_r.ncd
+Physical constraint file: project.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report, limited to 25 items per constraint
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------+------------+------------------+--------+
+            |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+------------+------------+------------+------------+------------+------------------+--------+
+rst         |    0.868(R)|      FAST  |    1.020(R)|      SLOW  |clk25M            |   0.000|
+------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+            |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+VGA_B<2>    |        12.437(R)|      SLOW  |         4.296(R)|      FAST  |clk25M            |   0.000|
+VGA_B<3>    |        12.356(R)|      SLOW  |         4.269(R)|      FAST  |clk25M            |   0.000|
+VGA_G<1>    |        12.457(R)|      SLOW  |         4.324(R)|      FAST  |clk25M            |   0.000|
+VGA_G<2>    |        12.665(R)|      SLOW  |         4.440(R)|      FAST  |clk25M            |   0.000|
+VGA_G<3>    |        12.566(R)|      SLOW  |         4.387(R)|      FAST  |clk25M            |   0.000|
+VGA_Hsync_n |        11.528(R)|      SLOW  |         4.505(R)|      FAST  |clk25M            |   0.000|
+VGA_R<1>    |        12.530(R)|      SLOW  |         4.349(R)|      FAST  |clk25M            |   0.000|
+VGA_R<2>    |        13.027(R)|      SLOW  |         4.586(R)|      FAST  |clk25M            |   0.000|
+VGA_R<3>    |        12.426(R)|      SLOW  |         4.291(R)|      FAST  |clk25M            |   0.000|
+VGA_Vsync_n |        12.148(R)|      SLOW  |         4.489(R)|      FAST  |clk25M            |   0.000|
+------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock CAM_href
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAM_href       |         |         |         |    1.447|
+CAM_pclk       |         |         |    0.196|    1.447|
+CAM_vsync      |         |         |         |    1.447|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CAM_pclk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAM_href       |         |    2.707|    0.938|    1.524|
+CAM_pclk       |         |    2.707|         |    1.447|
+CAM_vsync      |         |    2.707|    1.274|    1.524|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock CAM_vsync
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+CAM_href       |         |         |         |    1.447|
+CAM_pclk       |         |         |    0.003|    1.447|
+CAM_vsync      |         |         |         |    1.447|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    4.544|         |         |         |
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+clk            |CAM_xclk       |    8.331|
+---------------+---------------+---------+
+
+
+Analysis completed Mon Feb  3 17:55:44 2020 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 769 MB
+
+
+

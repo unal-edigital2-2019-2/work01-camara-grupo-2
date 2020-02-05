@@ -2,4 +2,4 @@ verilog work ../test_cam.v
 verilog work ../VGA_driver.v
 verilog work ../clk24_25_nexys4.v
 verilog work ../buffer_ram_dp.v
-verilog work ../captura_datos_downsampler.v
+verilog work ../cam_read.v

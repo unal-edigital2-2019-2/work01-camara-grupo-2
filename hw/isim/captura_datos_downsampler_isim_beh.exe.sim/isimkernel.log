@@ -2,9 +2,28 @@ Command line:
    captura_datos_downsampler_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  53363
+     -socket  34687
 
-Tue Nov 19 10:50:19 2019
+Tue Nov 19 16:04:27 2019
 
 
- Elaboration Time: 0.01 sec
+ Elaboration Time: 0.08 sec
+
+ Current Memory Usage: 196.788 Meg
+
+ Total Signals          : 17
+ Total Nets             : 48
+ Total Signal Drivers   : 8
+ Total Blocks           : 2
+ Total Primitive Blocks : 2
+ Total Processes        : 10
+ Total Traceable Variables  : 32
+ Total Scalar Nets and Variables : 385
+Total Line Count : 47
+
+ Total Simulation Time: 0.09 sec
+
+ Current Memory Usage: 272.29 Meg
+
+Tue Nov 19 16:38:14 2019
+

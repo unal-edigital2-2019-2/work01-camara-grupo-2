@@ -2,7 +2,7 @@
 module buffer_ram_dp#( 
 	parameter AW = 15, // Cantidad de bits  de la dirección 
 	parameter DW = 8, // cantidad de Bits de los datos 
-	parameter   imageFILE= "/home/juandcarrillo/Documents/GitHub/work01-camara-grupo-2/hw/src")
+	parameter   imageFILE= "image.mem")
 	( 
 	//escritura
 	input  clk_w, 
@@ -32,11 +32,11 @@ always @(posedge clk_r) begin
 		data_out <= ram[addr_out]; 
 end
 
-
+/*
 initial begin
 	$readmemh(imageFILE, ram);
 	ram[15'b111111111111111]=8'b00000011;
 	
 end
-
+*/
 endmodule
